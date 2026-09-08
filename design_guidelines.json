@@ -1,0 +1,147 @@
+{
+  "app_name": "ABHYUDAYA-CHATURBHUJ",
+  "personality": "5 Brutalist Mobile (Modified for Civic Tech: Nothing OS inspired)",
+  "personality_one_liner": "A radically clean, function-first civic tool using stark monochrome contrast and a single red signal accent to cut through the noise.",
+  "color": {
+    "surface": "#FFFFFF",
+    "onSurface": "#111111",
+    "surfaceSecondary": "#F7F7F7",
+    "onSurfaceSecondary": "#111111",
+    "surfaceTertiary": "#EAEAEA",
+    "onSurfaceTertiary": "#404040",
+    "surfaceInverse": "#111111",
+    "onSurfaceInverse": "#FFFFFF",
+    "brand": "#E50000",
+    "onBrand": "#FFFFFF",
+    "brandPrimary": "#111111",
+    "onBrandPrimary": "#FFFFFF",
+    "brandSecondary": "#E50000",
+    "onBrandSecondary": "#FFFFFF",
+    "brandTertiary": "#FEE2E2",
+    "onBrandTertiary": "#991B1B",
+    "success": "#059669",
+    "onSuccess": "#FFFFFF",
+    "warning": "#D97706",
+    "onWarning": "#FFFFFF",
+    "error": "#E50000",
+    "onError": "#FFFFFF",
+    "info": "#404040",
+    "onInfo": "#FFFFFF",
+    "border": "#E5E5E5",
+    "borderStrong": "#111111",
+    "divider": "#F0F0F0",
+    "muted": "#737373"
+  },
+  "typography": {
+    "displayFontFamily": "SpaceGrotesk",
+    "textFontFamily": "Inter",
+    "scale": {
+      "sm": 12,
+      "base": 14,
+      "lg": 16,
+      "xl": 20,
+      "2xl": 24
+    }
+  },
+  "spacing": {
+    "rule": "Generous intentional padding. Content is king. Empty halves of screens are layout bugs, use width 100% or space-between grids.",
+    "xs": 4,
+    "sm": 8,
+    "md": 12,
+    "lg": 16,
+    "xl": 24,
+    "2xl": 32,
+    "3xl": 48
+  },
+  "radius_tokens": {
+    "sm": 4,
+    "md": 8,
+    "lg": 12,
+    "pill": 999
+  },
+  "shadow_tier": 0,
+  "navigation": "bottom_tabs",
+  "icon_set": "Phosphor",
+  "glassmorphism": {
+    "enabled": false,
+    "do's": [],
+    "dont's": ["Do not use glassmorphism or blur effects. Use solid colors for sticky headers and bottom tabs to maintain the minimalist, flat aesthetic."]
+  },
+  "platform_libraries": {
+    "glass": {
+      "ios": "solid surfaceSecondary",
+      "android": "solid surfaceSecondary",
+      "low_end_android_fallback": "solid surfaceSecondary"
+    },
+    "image": "expo-image",
+    "blur": "none",
+    "bottom_sheet": "@gorhom/bottom-sheet",
+    "animation": "react-native-reanimated",
+    "gesture": "react-native-gesture-handler"
+  },
+  "screens": [
+    {
+      "name": "Citizen Home",
+      "purpose": "Location-aware feed of nearby civic issues.",
+      "states": {
+        "loading": "Centered monochrome spinner.",
+        "empty": "Clean line-art empty state, 'No issues nearby', with stark black 'Report Issue' button.",
+        "error": "Error message with a 1pt bordered 'Retry' button."
+      },
+      "layout": "Filter tabs (Nearby, City, State, All) as stark text with 1.5pt bottom border for active state. Issue cards take 100% width, 1pt border, flat #F7F7F7 background, structured metadata. No shadows."
+    },
+    {
+      "name": "Report Issue",
+      "purpose": "Guided, multi-field form to capture civic issue evidence at the scene.",
+      "states": {
+        "loading": "Transparent overlay with spinner.",
+        "empty": "N/A",
+        "error": "Red text below failing inputs."
+      },
+      "layout": "Single column vertical stack. Large photo upload zone with dashed border. Strict input fields with label above input. Sticky black primary button at bottom."
+    },
+    {
+      "name": "Issue Details",
+      "purpose": "Comprehensive view of a specific civic issue with system analysis and community actions.",
+      "states": {
+        "loading": "Skeleton of the image and metadata grid.",
+        "empty": "N/A",
+        "error": "Centered error text."
+      },
+      "layout": "Hero image at the top with mandatory vertical gradient scrim (transparent to ≥70% surfaceInverse). Title and severity/status tags overlayed at the bottom of the image. Strict data grid for System Analysis. Upvote and simulated donation actions in a sticky bottom container."
+    },
+    {
+      "name": "Government Dashboard",
+      "purpose": "High-level overview of civic metrics and priority issues for officials.",
+      "states": {
+        "loading": "Skeleton metrics.",
+        "empty": "N/A",
+        "error": "N/A"
+      },
+      "layout": "Grid of stark high-contrast metric cards (black bg, white text). List of top priority issues with red accents for 'Critical' severity."
+    }
+  ],
+  "images": {
+    "hero_pothole": {
+      "url": "https://images.unsplash.com/photo-1560782202-154b39d57ef2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzN8MHwxfHNlYXJjaHwyfHxwb3Rob2xlJTIwc3RyZWV0JTIwZGFtYWdlZCUyMHJvYWR8ZW58MHx8fHwxNzg4ODQ3ODQyfDA&ixlib=rb-4.1.0&q=85",
+      "alt": "Damaged road with pothole filled with water"
+    },
+    "hero_garbage": {
+      "url": "https://images.unsplash.com/photo-1762805545352-4ac5355b0f0b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDR8MHwxfHNlYXJjaHwxfHxnYXJiYWdlJTIwcGlsZSUyMHN0cmVldHxlbnwwfHx8fDE3ODg4NDc4NDJ8MA&ixlib=rb-4.1.0&q=85",
+      "alt": "Garbage truck and waste pile on the street"
+    },
+    "empty_state_clean_street": {
+      "url": "https://images.unsplash.com/photo-1494488180300-4c634d1b2124?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNDR8MHwxfHNlYXJjaHwxfHxlbXB0eSUyMHN0cmVldCUyMGNsZWFuJTIwbWluaW1hbHxlbnwwfHx8fDE3ODg4NDc4NDJ8MA&ixlib=rb-4.1.0&q=85",
+      "alt": "Clean, empty minimalist street"
+    }
+  },
+  "instructions_to_main_agent": [
+    "Follow the minimalist, Nothing-inspired civic tech direction. Rely entirely on structure, typography, and contrast, avoiding any shadows, gradients, or glassmorphism.",
+    "Banned Colors: Any shade of blue, purple, indigo, or navy. Use the provided stark monochrome base with the #E50000 red accent.",
+    "Components should have subtle 1pt borders (#E5E5E5) for definition instead of elevation/shadows.",
+    "For the interactive map, try to use a minimal or grayscale map tile style if the mapping library supports it.",
+    "On 'Issue Details', ensure the mandatory gradient scrim is implemented exactly as specified: transparent to at least 70% opacity over the hero image.",
+    "Use Phosphor icons consistently. Stick to regular or bold weight, keeping them uniform across the app.",
+    "Implement haptics on major actions like 'Upvote', 'Report Issue', and tab changes."
+  ]
+}
